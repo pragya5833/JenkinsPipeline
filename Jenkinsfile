@@ -5,7 +5,6 @@ pipeline {
       steps {
         sh 'mvn -B -DskipTests clean package'
         archiveArtifacts 'target/*.jar'
-        tool(name: 'maven-job', type: '3.6.3')
       }
     }
 
@@ -16,5 +15,8 @@ pipeline {
       }
     }
 
+  }
+  tools {
+    maven 'maven-job'
   }
 }
