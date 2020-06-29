@@ -19,4 +19,7 @@ pipeline {
     }
 
   }
+  tools {
+    maven 'maven-job'
+  }
 }
